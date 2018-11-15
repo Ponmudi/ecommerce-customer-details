@@ -1,68 +1,70 @@
 @import '~antd/dist/antd.css';
 .main-container {
-  background: #F5F5F5;
-  overflow: hidden;
-  padding: 24px;
-  width: 75%;
-  margin: auto;
+	background: #F5F5F5;
+	overflow: hidden;
+	padding: 24px;
+	width: 75%;
+	margin: auto;
 }
-
-.card-container > .ant-tabs-card > .ant-tabs-content {
-  height: 120px;
-  margin-top: -16px;
+.card-container {
+	>.ant-tabs-card {
+		>.ant-tabs-content {
+			height: 120px;
+			margin-top: -16px;
+			height: auto;
+			>.ant-tabs-tabpane {
+				background: #fff;
+				padding: 16px;
+			}
+		}
+		>.ant-tabs-bar {
+			border-color: #fff;
+			.ant-tabs-tab {
+				border-color: transparent;
+				background: transparent;
+				font-weight: 500;
+				font-size: 16px;
+			}
+			.ant-tabs-tab-active {
+				border-color: #fff;
+				background: #fff;
+			}
+		}
+	}
 }
-
-.card-container > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane {
-  background: #fff;
-  padding: 16px;
+.profileContainer {
+	.row {
+		margin: 20px 0;
+		label {
+			float: left;
+			font-weight: bold;
+		}
+	}
 }
-
-.card-container > .ant-tabs-card > .ant-tabs-bar {
-  border-color: #fff;
-}
-
-.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
-  border-color: transparent;
-  background: transparent;
-  font-weight: 500;
-  font-size: 16px;
-}
-
-.card-container > .ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
-  border-color: #fff;
-  background: #fff;
-}
-
-.card-container > .ant-tabs-card > .ant-tabs-content{
-  height: auto;
-}
-.profileContainer .row{
-  margin: 20px 0;
-}
-.profileContainer .row label{
-  float: left;
-  font-weight: bold;
-}
-.productContainer .row{
-  margin: 20px 0;
-}
-.productContainer .row:first-child{
-  margin-top: 0;
-}
-.productContainer .row label{
-  float: left;
-  font-weight: bold;
+.productContainer {
+	.row {
+		margin: 20px 0;
+		&:first-child {
+			margin-top: 0;
+		}
+		label {
+			float: left;
+			font-weight: bold;
+		}
+	}
 }
 .leftContainer {
-  float: left;
+	float: left;
 }
 .rightContainer {
-  margin-left: 115px;
+	margin-left: 115px;
 }
-.productImage img{
-  width: 100px;
-  border: 1px solid #ccc;
-  padding: 5px;
+.productImage {
+	img {
+		width: 100px;
+		border: 1px solid #ccc;
+		padding: 5px;
+	}
 }
 @media (min-width: 320px) and (max-width: 650px){
   .rightContainer {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import { Tabs } from 'antd';
 import jsonData from './data/data.json';
 import MyProfile from './components/MyProfile'
@@ -8,15 +8,6 @@ import MyOrders from './components/MyOrders'
 const TabPane = Tabs.TabPane;
 
 class App extends Component {
-
-  state = {
-    contacts: []
-  };
-
-  // componentDidMount(){
-
-  // } 
-
   render() {
     return (
     <section className="main-container">
