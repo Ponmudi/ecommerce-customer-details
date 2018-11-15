@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Tabs } from 'antd';
+import jsonData from './data/data.json';
+import MyProfile from './components/MyProfile'
+import MyOrders from './components/MyOrders'
+
+const TabPane = Tabs.TabPane;
 
 class App extends Component {
+
+  state = {
+    contacts: []
+  };
+
+  // componentDidMount(){
+
+  // } 
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <section className="main-container">
+      <div className="card-container">
+        <Tabs type="card">
+          <TabPane tab="My Profile" key="1">
+            <MyProfile profileData={jsonData}  />
+          </TabPane>
+          <TabPane tab="My Orders" key="2">
+            <MyOrders productData={jsonData.orders} />
+          </TabPane>
+        </Tabs>
       </div>
+    </section>
     );
   }
 }
