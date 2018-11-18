@@ -8,12 +8,11 @@ export default class MyOrder extends Component{
         console.log(key);
     }
     render(){
-        //console.log(this.props.productData)
         return(
             <div className="productContainer">
             <Collapse accordion defaultActiveKey={['1']} onChange={this.callback} >
                 {this.props.productData.map( (item,index) => (
-                        <Panel header={item.product.name} key={index+1}>
+                        <Panel header={`${item.product.name} - ${item.price}`}  key={index+1}>
                         <div className="leftContainer">
                             <div className="productImage"><img src={item.product.picture} alt="Product" /></div>
                         </div>

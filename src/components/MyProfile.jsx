@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 
 export default class MyProfile extends Component{
     render(){
-        //console.log(this.props.profileData)
         const {name,company,picture,about,email,phone,address,registered} = this.props.profileData
         return(
             <div className="profileContainer">
                 <div className="row"><label>Name:&nbsp;</label><div><span>{`${name.first} ${name.last}`}</span></div></div>
                 <div className="row">
-                    <div>{company}</div>
+                <div className="row"><label>Company:&nbsp;</label> <div><span>{company}</span></div></div>
                     <div><img src={picture} alt="company logo" /></div>
                 </div>
                 <div className="row"><label>About:&nbsp;</label> <div><span>{about}</span></div></div>
